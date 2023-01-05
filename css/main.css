@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style-type: none;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.body {
+    display: flex;
+}
+
+.left {
+    max-width: 270px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    border-right: 2px solid #F1F1F1;
+    background-color: #ffffff;
+}
+
+.nav {
+    background-color: #293A4C;
+    height: 100%;
+}
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+.nav-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 50px;
+    font-size: 10px;
+    color: #8393A3;
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+
+.nav-item {
+    background-image: url('../images/robot-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: calc(50% - 0px) calc(50% - 5px);
+    background-size: 38%;
+}
+
+.nav-item:last-child {
+    background-image: url('../images/robot-svgrepo-com.svg');
+}
+
+
+.nav-item:first-child {
+    width: 60px;
+    height: 40px;
+}
+.nav-item:hover {
+    background-color: #17212B;
+}
+
+.search-input {
+    width: 88%;
+    background-color: #F1F1F1;
+    border: 2px solid #F1F1F1;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 10px;
+    transition: all 0.1s linear;
+}
+
+.search-input::placeholder {
+    font-size: 10px;
+}
+
+.search-input:focus {
+    border: 2px solid #419FD9;
+}
+
+.chat-search {
+    padding: 7px;
+}
+.chats {
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+.menu-btn-btn {
+    display: inline-block;
+    background-image: url('../images/menu.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    width: 60px;
+    height: 40px;
+    border: none;
+    background-color: #293A4C;
+    cursor: pointer;
+}
+
+
+.chats-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-item {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    transition: all 0.1s linear;
+}
+
+.chat-item:hover {
+    background-color: #F1F1F1;
+}
+
+.chat-item:active {
+    background-color: #419FD9;
+}
+
+.chat-item:active .chat-name {
+    color: #ffffff;
+}
+.chat-item:active .chat-mess {
+    color: #ffffff;
+}
+
+.chat-ava {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.chat-name {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 2px;
+}
+.chat-mess {
+    margin: 0;
+    font-size: 12px;
+    color: #8393A3;
+}
+
+.right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-heading {
+    padding: 7px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #F1F1F1;
+}
+
+.chat-title {
+    font-size: 13px;
+    margin: 0 0 3px;
+}
+
+.chat-time {
+    font-size: 12px;
+    color: #8393A3;
+}
+
+.chat-search-icon , .chat-panels {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/search-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    cursor: pointer;
+}
+.chat-panels {
+    background-image: url('../images/menu.png');
+}
+
+.message-bg {
+    height: 430px;
+    background-image: url('../images/chat-bg.jpg');
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.chat-label-file {
+    margin: 0 10px 0;
+    background-image: url('../images/folder-open-svgrepo-com.svg');
+    background-size: 100%;
+    background-position: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.chat-input-file {
+    display: none;
+}
+.chat-input-text {
+    flex-grow: 1;
+    border: none;
+    outline: none;  
+    resize: none;
+    height: 20;
+}
+.send-voice-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
